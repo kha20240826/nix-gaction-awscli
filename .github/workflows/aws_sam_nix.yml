@@ -1,4 +1,4 @@
-name: awscli nix
+name: aws-sam-cli nix
 
 on:
   push:
@@ -19,6 +19,6 @@ jobs:
       - name: Print aws version
         uses: workflow/nix-shell-action@v3
         with:
-          packages: awscli2
+          packages: aws-sam-cli
           script: |
-            aws --version
+            sam --version
